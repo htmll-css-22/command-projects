@@ -1,0 +1,23 @@
+.icon-box {
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 4px;
+
+  justify-content: center;
+  background-color: #f5f4fa;
+  height: 120px;
+  // width: 450px;
+  text-align: center;
+
+  @include mq(tablet) {
+    width: 354px;
+  }
+  @include mq(desktop) {
+    width: 270px;
+  }
+}
+
+.icon {
+  padding: 0;
+  border: none;
+}

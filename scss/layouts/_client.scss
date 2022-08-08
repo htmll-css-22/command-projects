@@ -1,0 +1,80 @@
+.client {
+  padding-bottom: 60px;
+  @include mq(desktop) {
+    padding-bottom: 94px;
+  }
+}
+.client.container {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.client__title {
+  @include fonts(700, 28px, 1.18, 0.03em);
+  text-align: center;
+
+  margin-top: 60px;
+  margin-bottom: 30px;
+  @include mq(tablet) {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  @include mq(desktop) {
+    @include fonts(700, 36px, 1.17, 0.03em);
+    margin-top: 94px;
+    margin-bottom: 50px;
+  }
+}
+
+.link-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+  height: 92px;
+  border: 1px solid var(--color5);
+  border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-box .item {
+  height: 92px;
+
+  @include mq(mobile) {
+    max-width: 210px;
+    width: 100%;
+  }
+  @include mq(tablet) {
+    max-width: 216px;
+    width: 100%;
+  }
+  @include mq(desktop) {
+    max-width: 170px;
+    width: 100%;
+  }
+}
+
+.clients-box {
+  gap: 30px;
+  @include mq(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.client .link-logo:hover,
+.client .link-logo:focus {
+  fill: var(--color3);
+  border-color: var(--color3);
+}
